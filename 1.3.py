@@ -2,16 +2,31 @@ fichier = open("FIFA_World_Cup/FIFA-2022.txt", "r")
 
 f = fichier.readlines()
 
-liste_vide = []
+
+def recup_ekip(ligne):
+
+
+    sepa = ","
+    acc = 0
+    sequence = []
+
+
+    for pos_actu in ligne:
+        if pos_actu == sepa:
+            acc = acc + 1
+        if acc > 0 and acc <= 1 and pos_actu != sepa:
+            sequence += pos_actu
+    return sequence[0] + sequence[1] + sequence[2]
+    
+
+liste_ekip = []
+
 
 for ligne in f:
-    if(ligne[-1] == "\n"):
-        liste_vide.append(ligne[:-1])
-    else:
-        liste_vide.append(ligne)
+    liste_ekip.append(recup_ekip(ligne))
+
+del liste_ekip[0]
 
 
-del liste_vide[0]
-
-trois_premieres_lettres = [pays[2:5] for pays in liste_vide]
-print(trois_premieres_lettres)
+for equipe in liste_ekip:
+    print(equipe)

@@ -1,6 +1,3 @@
-import random
-
-
 fichier = open("FIFA_World_Cup/FIFA-2022.txt", "r")
 
 
@@ -16,10 +13,9 @@ for ligne in f:
     else:
         liste_vide.append(ligne)
 
+
 del liste_vide[0]
 
 
-random.shuffle(liste_vide)
-
-
-print(liste_vide)
+tpl = [pays[2:5] for pays in liste_vide]
+print(tpl)
