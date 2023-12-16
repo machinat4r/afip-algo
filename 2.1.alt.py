@@ -24,3 +24,9 @@ random.shuffle(liste_vide)
 
 for equipe in liste_vide:
     print(equipe)
+
+
+with open("FIFA_World_Cup/random.txt", "w") as fichierCopie:
+    for equipe in liste_vide:
+        fichierCopie.write(equipe + '\n')
+
