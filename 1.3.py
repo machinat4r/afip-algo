@@ -31,3 +31,8 @@ del liste_ekip[0]
 #print en colonne
 for equipe in liste_ekip:
     print(equipe)
+
+with open("FIFA_World_Cup/Sans_la_premiere_ligne", "w") as fichiercopie: 
+    for equipe in liste_ekip:
+        fichiercopie.write(equipe + "\n")
+

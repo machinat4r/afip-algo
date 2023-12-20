@@ -15,3 +15,5 @@ for ligne in f:
 del liste_vide[0]
 #affiche la liste dans la console/terminale
 print(liste_vide)
+
+
